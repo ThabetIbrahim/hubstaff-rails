@@ -1,0 +1,8 @@
+<center class="row">
+<div class="medium-8 columns">
+  <h1>Recent Screenshots: <%= link_to "Home", root_path %></h1>
+<% @hubstaff_screenshots["screenshots"].each do |screen| %>
+  <p><%= image_tag "#{screen['url']}" %></p>
+<% end %>
+</div>
+</center>

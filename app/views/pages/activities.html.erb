@@ -1,0 +1,23 @@
+<center>
+<h1>Recent Activities : <%= link_to "Home", root_path %></h1>
+<table>
+  <thead>
+    <tr>
+      <th width="200">Project</th>
+      <th width="200">Total Time Worked</th>
+      <th width="200">Keyboard</th>
+      <th width="200">Mouse</th>
+      <th width="200">Percent Active</th>
+    </tr>
+  </thead>
+  <% @hubstaff_activities["activities"].each do |activity| %>
+  <tbody>
+  <td><%= activity["project_id"] %></td>
+  <td><%= activity["tracked"] %></td>
+  <td><%= activity["keyboard"] %></td>
+  <td><%= activity["mouse"] %></td>
+  <td><%= activity["overall"] %></td>
+  <tbody>
+  <% end %>
+</table>
+</center>

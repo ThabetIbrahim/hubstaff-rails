@@ -1,0 +1,8 @@
+<h1>Log Into Your Hubstaff Account</h1>
+<%= form_tag(controller: "pages", action: "integration", method: "post") do %>
+  <%= label_tag :email %>
+  <%= text_field_tag :hubstaff_email %>
+  <%= label_tag :password %>
+  <%= password_field_tag :hubstaff_password %>
+  <%= submit_tag "Log Into Hubstaff" %>
+<% end %>
