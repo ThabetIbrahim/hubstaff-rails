@@ -1,4 +1,4 @@
-# Hubstaff-rails
+# Hubstaff Rails - Integrate Hubstaff API Into Your Rails 5 App
 
 ## Getting Started
 
