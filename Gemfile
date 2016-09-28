@@ -25,6 +25,7 @@ gem "uglifier"
 #hubstaff-rails-sample-app
 gem "hubstaff-ruby", git: "https://github.com/hookengine/hubstaff-ruby.git"
 gem "clearance"
+gem "high_voltage"
 gem "foundation-rails"
 
 group :development do
@@ -64,5 +65,3 @@ group :staging, :production do
   gem "rack-timeout"
   gem "rails_stdout_logging"
 end
-
-gem "high_voltage"

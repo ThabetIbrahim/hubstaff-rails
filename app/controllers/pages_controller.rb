@@ -11,7 +11,7 @@ class PagesController < ApplicationController
   end
 
   def integration
-    if params[:hubstaff_email].present? && params[:hubstaff_password].present?
+    if params[:hubstaff_email].present? && params[:hubstaff_password].present? #check if hubstaff email/password is passed
       @hubstaff_email = params[:hubstaff_email]
       @hubstaff_password = params[:hubstaff_password]
       authenticate_and_save_auth_token(@hubstaff_email,@hubstaff_password)
@@ -24,7 +24,7 @@ class PagesController < ApplicationController
   def authenticate_and_save_auth_token(email,password)
     client_user = User.find_by_email(current_user.email)
     HUBSTAFF_CLIENT.authenticate(@hubstaff_email,@hubstaff_password)
-    client_user.hubstaff_auth_token = HUBSTAFF_CLIENT.auth_token
+    client_user.hubstaff_auth_token = HUBSTAFF_CLIENT.auth_token #created a migration to add hubstaff_auth_token to User model
     client_user.save!
   end
 
