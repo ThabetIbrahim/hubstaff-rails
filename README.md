@@ -66,9 +66,7 @@ def integration
   if params[:hubstaff_email].present? && params[:hubstaff_password].present? #check if hubstaff email/password is submitted and grab it on post request
     @hubstaff_email = params[:hubstaff_email]
     @hubstaff_password = params[:hubstaff_password]
-    authenticate_and_save_auth_token(@hubstaff_email,@hubstaff_password)
-    #then save
-authenticate and save
+    authenticate_and_save_auth_token(@hubstaff_email,@hubstaff_password) #then authenticate and save the auth_token
     redirect_to root_path, notice: "Successfully Connected To Hubstaff"
   else
     render :integration, alert: "Unable To Connect To Hubstaff"
