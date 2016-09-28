@@ -101,7 +101,6 @@ def activities #retrieve activities for display in your app
     render :integration, alert: "Please Connect To Hubstaff"
   end
 end
-end
 ```
 **Step 6:[Your Turn]** Create forms that your users can pass the
 required parameters into, so that they retrieve & display the exact data they
