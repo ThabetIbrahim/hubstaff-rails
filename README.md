@@ -23,7 +23,7 @@ After setting up, you can run the application using [Heroku Local]:
 
 ## Using the Hubstaff Ruby API client
 
-**Step 1:** Add `hubstaff-ruby` to your Gemfile and `bundle install`
+**Step 1:** Add `hubstaff-ruby` to your Gemfile and `bundle install`.
 
 ```ruby
 #Gemfile
@@ -43,8 +43,8 @@ Dotenv.load(".env")
 Rails.application.initialize!
 ```
 
-**Step 4:** Define your routes to handle authentication with the API and
-retrieving data from your Hubstaff account.
+**Step 4:** Define your routes to handle authentication and
+retrieving data from Hubstaff.
 
 ```ruby
 #routes.rb
@@ -54,9 +54,14 @@ post "/pages/integration" => "pages#integration", as: :integration #process emai
 get "/pages/screenshots" => "pages#screenshots", as: :screenshots #display screenshots
 get "/pages/activities" => "pages#activities", as: :activities #display activities
 ```
-**Step 5:** Define actions in your pages controller
+**Step 5:** Define actions in your pages controller.
 
 ```ruby
+#pages_controller.rb
+
+include Hubstaff
+HUBSTAFF_CLIENT = Hubstaff::Client.new(ENV["HUBSTAFF_APP_TOKEN"])
+
 def integration
   if params[:hubstaff_email].present? && params[:hubstaff_password].present? #check if hubstaff email/password is submitted and grab it on post request
     @hubstaff_email = params[:hubstaff_email]
@@ -98,10 +103,9 @@ def activities #retrieve activities for display in your app
 end
 end
 ```
-
-**Step 6:** Add forms so that your users can dynamically pass in the
-required parameters they need to retrieve & display data they want from their
-Hubstaff account.
+**Step 6:[Your Turn]** Create forms that your users can pass the
+required parameters into, so that they retrieve & display the exact data they
+want.
 
 ## Guidelines
 
