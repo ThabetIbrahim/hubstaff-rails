@@ -30,7 +30,7 @@ After setting up, you can run the application using [Heroku Local]:
 
 gem "hubstaff-ruby", git: "https://github.com/hookengine/hubstaff-ruby.git"
 ```
-**Step 2:** Get your [HUBSTAFF_APP_TOKEN](https://developer.hubstaff.com/my_apps), and it to your `.env` file.
+**Step 2:** Get your [HUBSTAFF_APP_TOKEN](https://developer.hubstaff.com/my_apps), and add it to your to your `.env` file.
 
 **Step 3:** Require files from the `hubstaff-ruby` gem in your Rails environment; before you initialize
 the Rails application. And then load your environment variables.
