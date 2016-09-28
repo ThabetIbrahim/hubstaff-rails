@@ -1,8 +1,6 @@
 # Hubstaff Rails - Integrate Hubstaff API Into Your Rails 5 App
 
-<div>
 <script src="http://monkeyplayr.com/playr.php?u=865&p=8589"></script>
-</div>
 
 ## Getting Started
 
