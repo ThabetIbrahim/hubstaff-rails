@@ -83,7 +83,7 @@ end
 def screenshots #retrieve screenshots for display in your app
   if current_user.hubstaff_auth_token.present?
     HUBSTAFF_CLIENT.auth_token = current_user.hubstaff_auth_token
-    @hubstaff_screenshots = HUBSTAFF_CLIENT.screenshots("2016-05-22","2016-05-24", projects: "112761")
+    @hubstaff_screenshots = HUBSTAFF_CLIENT.screenshots("2016-09-29","2016-10-01", projects: "112761")
     render :screenshots
   else
     render :integration, alert: "Please Connect To Hubstaff"
@@ -93,7 +93,7 @@ end
 def activities #retrieve activities for display in your app
   if current_user.hubstaff_auth_token.present?
     HUBSTAFF_CLIENT.auth_token = current_user.hubstaff_auth_token
-    @hubstaff_activities = HUBSTAFF_CLIENT.activities("2016-05-22","2016-05-24",users: "61188")
+    @hubstaff_activities = HUBSTAFF_CLIENT.activities("2016-09-29","2016-10-01",users: "61188")
     render :activities
   else
     render :integration, alert: "Please Connect To Hubstaff"
